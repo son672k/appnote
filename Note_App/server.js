@@ -5,7 +5,9 @@ const cors = require('cors');
 const mysql = require('mysql2');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'http://ec2-13-215-207-157.ap-southeast-1.compute.amazonaws.com'
+}));
 app.use(bodyParser.json());
 
 const db = mysql.createConnection({
