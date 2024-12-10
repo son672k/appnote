@@ -20,7 +20,7 @@ services:
     build:
       context: ./Note_App/client
     ports:
-      - "3000:3000"
+      - "80:80"
     depends_on:
       - backend
 
